@@ -103,7 +103,7 @@ sub _install {
    for my $version (@things) {
       if($version eq "perlbrew") {
          Rex::Logger::info("Downloading and installing Perlbrew...");
-         run "curl -kL http://install.perlbrew.pl | PERLBREW_ROOT=$perlbrew_root sh";
+         run "curl -kL http://install.perlbrew.pl | PERLBREW_ROOT=$perlbrew_root bash";
          if($? != 0) {
             Rex::Logger::info("You need curl to install Perlbrew.", "warn");
             die "You need curl to install Perlbrew.";
